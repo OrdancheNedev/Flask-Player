@@ -1,7 +1,10 @@
-# Description
+# Project Description
 
-This is a web app that analysis videos from surveillance and recognizes people. The app was build with the following technologies: Bootstrap, Flask, OpenCV and FaceNet. The project is non-commercial, it is a project made by a college student to show how to use full-stack concepts and machine vision, ai in one system. The goal of this project is research of new possibilities and technologies. 
-The institution mentioned in the web app is made up in order to show who uses the app.
+
+This web app is designed to analyze surveillance videos, specifically from abandoned buildings, to recognize people in them. The app integrates various technologies such as OpenCV, FaceNet, Flask, and Bootstrap, providing a seamless full-stack solution that demonstrates facial recognition, machine vision, and AI in action.
+
+Built as a non-commercial research project by a college student, the goal is to showcase the potential of combining full-stack development with AI and machine vision in real-world applications. The app processes videos (usually 1-2 minutes long) to detect faces and identify people based on an uploaded image.
+
 
 
 ## Main page
@@ -13,10 +16,26 @@ The institution mentioned in the web app is made up in order to show who uses th
 ![Alt text](https://raw.githubusercontent.com/OrdancheNedev/Flask-Player/master/image2.png)
 
 
-# How it works
+## How It Works:
 
-You upload a video and then an image, you click play and the app analysis the video, every frame where the person from the image is detected is placed in  the folder upload/recognized and you can download the images by clicking the button download images.
+### Video and Image Upload:
 
-After uploading a new video and a new image the previous video, image, recognized images and zip archive for downloads are deleted authomatically on the server-side. 
+     The user uploads a short surveillance video (1-2 minutes, typically from abandoned buildings) and an image of the person to be recognized.
+     The app accepts the video and an image for facial recognition.
+
+### Video Processing:
+
+    Once uploaded, the app processes the video frame by frame using OpenCV. Each frame is analyzed for faces.
+    The app compares the detected faces to the uploaded image using FaceNet. If a match is found, the frame is saved as an image in the upload/recognized folder.
+
+### Download Recognized Frames:
+
+    After analyzing the video, the app compiles the recognized frames into a zip file.
+    The user can download the zip archive, containing all frames where the person from the uploaded image was detected.
+
+### Automatic Cleanup:
+
+    When a new video and image are uploaded, the server automatically deletes any previously uploaded video, image, recognized images, and the zip archive.
+    This ensures the system remains efficient, only processing the latest files and preventing unnecessary data storage.
 
 
