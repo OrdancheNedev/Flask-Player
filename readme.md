@@ -16,26 +16,4 @@ Built as a non-commercial research project by a college student, the goal is to 
 ![Alt text](https://raw.githubusercontent.com/OrdancheNedev/Flask-Player/master/image2.png)
 
 
-## How It Works:
-
-## Video and Image Upload:
-
-     The user uploads a short surveillance video (1-2 minutes, typically from abandoned buildings) and an image of the person to be recognized.
-     The app accepts the video and an image for facial recognition.
-
-## Video Processing:
-
-    Once uploaded, the app processes the video frame by frame using OpenCV. Each frame is analyzed for faces.
-    The app compares the detected faces to the uploaded image using FaceNet. If a match is found, the frame is saved as an image in the upload/recognized folder.
-
-## Download Recognized Frames:
-
-    After analyzing the video, the app compiles the recognized frames into a zip file.
-    The user can download the zip archive, containing all frames where the person from the uploaded image was detected.
-
-## Automatic Cleanup:
-
-    When a new video and image are uploaded, the server automatically deletes any previously uploaded video, image, recognized images, and the zip archive.
-    This ensures the system remains efficient, only processing the latest files and preventing unnecessary data storage.
-
 
