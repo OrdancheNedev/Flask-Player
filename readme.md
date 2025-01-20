@@ -6,3 +6,5 @@ The institution mentioned in the web app is made up in order to show who uses th
 
 ## Main page
 
+
+![Alt text](https://raw.githubusercontent.com/OrdancheNedev/Flask-Player/master/image1.png)
